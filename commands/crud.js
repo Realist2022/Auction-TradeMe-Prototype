@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const config = require('config');
 const chalk = require('chalk');
 const Item = require('../models/item');
-const seedItems = require('../data/seedData');
+const seedItems = require('../data/seedData.json');
 
 const connectDB = async () => {
   if (mongoose.connection.readyState === 0) {
@@ -34,11 +34,11 @@ const addItem = async (item) => {
   }
 };
 
-const findItem = async (name) => {
+const findItem = async (title) => {
   try {
     await connectDB();
-    const search = new RegExp(name, 'i');
-    const items = await Item.find({ name: search });
+    const search = new RegExp(title, 'i');
+    const items = await Item.find({ title: search });
     if (items.length === 0) {
       console.log(chalk.yellow('No items found.'));
     } else {
@@ -46,7 +46,7 @@ const findItem = async (name) => {
       items.forEach(item => {
         console.log(`
   ${chalk.bold('ID:')} ${item._id}
-  ${chalk.bold('Name:')} ${item.name}
+  ${chalk.bold('title:')} ${item.title}
   ${chalk.bold('Description:')} ${item.description}
         `);
       });
