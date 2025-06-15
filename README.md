@@ -11,7 +11,7 @@ This is a command-line interface (CLI) tool for managing auction item data in a 
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/your-username/my-interactive-cli.git](https://github.com/your-username/my-interactive-cli.git)
+    git clone [https://github.com/Realist2022/Auction-TradeMe-Prototype.git]
     ```
 
 2.  **Navigate to the project directory:**
