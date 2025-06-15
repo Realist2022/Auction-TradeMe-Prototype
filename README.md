@@ -1,4 +1,4 @@
-# Auction Data Interactive CLI
+# Auction-TradeMe-Prototype
 
 This is a command-line interface (CLI) tool for managing auction item data in a MongoDB database. It allows you to add, find, update, remove, seed, and delete auction data interactively.
 
